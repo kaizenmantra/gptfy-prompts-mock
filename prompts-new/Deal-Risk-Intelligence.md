@@ -31,13 +31,13 @@ High-Risk Opportunities Table
 
 Risk Factor Analysis Table  
 - Source: Analyze patterns across Opportunities + Activities + Cases data
-- Show risk factor categories with impact assessment
+- Show specific risk factors with clear opportunity linkage
 - Columns:
 - Risk Category → AI-identified categories (Budget, Competition, Champion, Technical, Timeline)
-- Affected Deals → Count of opportunities impacted
+- Affected Opportunities → Show specific opportunity names as hyperlinks to '/'+{{{Opportunities.Id}}}
 - Risk Level → High/Medium/Low based on severity
 - Early Warning Signs → AI-generated indicators from activity sentiment
-- Mitigation Strategy → AI-generated recommendations
+- Mitigation Strategy → AI-generated recommendations specific to the affected opportunities
 
 Activity Sentiment Tracker
 - Source: "Activities" array linked to high-risk opportunities
@@ -98,6 +98,7 @@ For every risk assessment and recommendation:
 4. Suggest concrete timeframes for actions
 5. Highlight the most critical 2-3 deals requiring immediate focus
 6. Include dollar amounts at risk to emphasize business impact
+7. **CRITICAL**: In Risk Factor Analysis table, always show specific opportunity names (not just counts) so users can see exactly which deals are affected by each risk factor
 
 -- VISUALIZATION & HTML STYLE REQUIREMENTS:
 
