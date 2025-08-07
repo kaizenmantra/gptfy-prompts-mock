@@ -1,0 +1,13 @@
+Campaign Member ID,Campaign Name,Campaign Type,Contact ID,Account ID,Status,Member Since,Response Date,Lead Source,Description,Campaign Owner
+"CMP-NPB-001","2024 Financial Services Summit","Conference","CON-NPB-001","ACC-NPB-001","Attended","2024-09-01","2024-09-15","Event","Hans Gruber attended and spoke on panel about risk management innovation","Marketing Team"
+"CMP-NPB-002","2024 Financial Services Summit","Conference","CON-NPB-003","ACC-NPB-001","Attended","2024-09-01","2024-09-15","Event","Holly McClane attended credit risk workshops","Marketing Team"
+"CMP-NPB-003","Q4 2024 ESG Webinar Series","Webinar","CON-NPB-010","ACC-NPB-001","Registered","2024-10-15","2024-10-20","Digital Marketing","Maria Santos attended 3 of 4 webinars on ESG integration","Marketing Team"
+"CMP-NPB-004","Credit Analytics Product Launch","Product Launch","CON-NPB-003","ACC-NPB-001","Engaged","2024-06-01","2024-06-15","Email Campaign","Holly engaged with product launch materials and requested demo","Product Marketing"
+"CMP-NPB-005","2024 API Developer Conference","Conference","CON-NPB-004","ACC-NPB-001","Attended","2024-11-01","2024-11-05","Event","John Rodriguez attended technical sessions on API integration","Marketing Team"
+"CMP-NPB-006","Data Modernization Executive Roundtable","Executive Event","CON-NPB-006","ACC-NPB-001","Attended","2024-10-01","2024-10-01","Executive Engagement","Theo Nakamura participated in CTO roundtable discussion","Executive Programs"
+"CMP-NPB-007","APAC Trading Technology Forum","Regional Event","CON-NPB-005","ACC-NPB-001","Speaker","2024-08-15","2024-08-15","Event","Ellis Robinson spoke about trading desk transformation","Marketing Team"
+"CMP-NPB-008","Supply Chain Finance Innovation Series","Webinar","CON-NPB-012","ACC-NPB-001","Registered","2024-12-01","2024-12-10","Digital Marketing","Angela Park attended sessions on supply chain risk","Marketing Team"
+"CMP-NPB-009","2025 Risk Management Symposium","Conference","CON-NPB-001","ACC-NPB-001","Invited","2025-03-01","","Event","Hans Gruber invited as keynote speaker","Executive Programs"
+"CMP-NPB-010","Machine Learning in Finance Workshop","Workshop","CON-NPB-008","ACC-NPB-001","Attended","2024-07-15","2024-07-20","Event","Tony Chen attended hands-on ML workshops","Marketing Team"
+"CMP-NPB-011","Customer Advisory Board","Advisory Program","CON-NPB-001","ACC-NPB-001","Member","2024-01-01","","Relationship Program","Hans Gruber serves on customer advisory board","Customer Success"
+"CMP-NPB-012","Best Practices Webinar - Credit Risk","Webinar","CON-NPB-009","ACC-NPB-001","Attended","2024-05-15","2024-05-15","Digital Marketing","Harry Thomson attended and asked questions during Q&A","Marketing Team"
