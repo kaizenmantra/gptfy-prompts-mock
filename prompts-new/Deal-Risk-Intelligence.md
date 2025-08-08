@@ -11,14 +11,17 @@ CRITICAL: DO NOT add \n, line breaks, or any form of newlines in the output. Ens
 
 -- GENERATE THE FOLLOWING COMPONENTS:
 
-Executive Risk Summary Card
-- Overall portfolio health score (calculated from opportunity data)
-- Number of high-risk deals requiring immediate attention
-- Potential revenue at risk with dollar amounts
-- Key risk trends and patterns identified
+Executive Risk Summary Cards (3-Card Dashboard Layout)
+- EXACTLY 3 CARDS in responsive flexbox: `display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px;`
+- Each card: `flex: 1; min-width: 300px; max-width: 500px;` for responsive same-line layout
+- CARD 1: Portfolio Risk Health Score → Large centered score (0-100) with risk level descriptive text below
+- CARD 2: Revenue at Risk → Large centered dollar amount with timeframe text below
+- CARD 3: Critical Actions Required → Large centered number with urgency text below
+- REQUIRED HTML STRUCTURE: Each card must have `background: #ffffff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(60,72,88,0.08); text-align: center;`
+- CONSISTENT FORMAT: Card title in small caps, large number/score, descriptive text below
 
-High-Risk Opportunities Table
-- Source: "Opportunities" array (show ALL opportunities with risk score ≥ 70)
+Risk-Scored Opportunities Table
+- Source: "Opportunities" array (show ALL opportunities with calculated risk scores)
 - Columns:
 - Opportunity Name → Show {{{Opportunities.Name}}} as hyperlink to '/'+{{{Opportunities.Id}}}
 - Amount → Format {{{Opportunities.Amount}}} as currency
@@ -50,19 +53,26 @@ Activity Sentiment Tracker
 - Engagement Quality → Assess meeting types and outcomes
 - Urgency Flag → Highlight deals requiring immediate attention
 
-Risk Score Reasoning
-- Source: Risk calculation logic for each opportunity
-- Provide detailed breakdown of why each opportunity received its risk score
-- Show specific factors that contributed to the score with weights
-- Include supporting evidence from Activities, Cases, and Notes
-- Format: Regular font size, factual explanations
+Risk Score Visual Breakdown
+- Source: Risk calculation logic for EVERY opportunity in the data
+- VISUAL FORMAT: Use horizontal progress bars or gauge-style indicators for each risk factor
+- Show risk factors as visual components (not text paragraphs):
+  - Timeline Risk: Progress bar showing days to close vs. stage progression
+  - Champion Strength: Visual indicator (Strong/Weak/Missing)
+  - Activity Sentiment: Trend arrow (↗ Improving/→ Stable/↘ Declining)
+  - Competition Level: Visual threat indicator (High/Medium/Low)
+  - Support Issues: Icon-based indicator (✓ Clean / ⚠ Issues)
+- COMPACT FORMAT: Each opportunity gets a visual risk factor grid, not lengthy text explanations
+- CRITICAL: Must show visual breakdown for ALL opportunities in the Opportunities array
 
-Detailed Opportunity Analysis  
-- Source: Individual deep-dive sections for each opportunity
-- Create separate section for each opportunity with comprehensive analysis
-- Include: stakeholder dynamics, competitive situation, timeline analysis, risk mitigation plan
-- Show progression history, key activities, and next steps
-- Format: Collapsible or sectioned layout for easy navigation
+Opportunity Risk Cards
+- Source: Individual visual cards for each opportunity in the data  
+- VISUAL FORMAT: Compact card layout showing key risk metrics at a glance
+- Include for each opportunity: Risk gauge, Key stakeholder, Primary threat, Next action
+- Show visual timeline indicators and competitive positioning
+- Format: Grid of opportunity cards with consistent visual design
+- REMOVE: Long text paragraphs and detailed prose analysis
+- CRITICAL: Must create visual risk cards for ALL opportunities in the Opportunities array
 
 Case Impact Assessment
 - Source: "Cases" array to identify support issues affecting deals
@@ -90,27 +100,36 @@ Risk Score Ranges:
 - 50-69: Medium Risk (Yellow) - Standard management
 - 0-49: Low Risk (Green) - On track
 
-Instructions for AI-Generated Insights:
+Instructions for Visual Risk Intelligence:
 For every risk assessment and recommendation:
 1. Base analysis strictly on visible data patterns
 2. Generate specific, actionable next steps (not generic advice)
-3. Identify specific stakeholders who need attention
-4. Suggest concrete timeframes for actions
-5. Highlight the most critical 2-3 deals requiring immediate focus
-6. Include dollar amounts at risk to emphasize business impact
-7. **CRITICAL**: In Risk Factor Analysis table, always show specific opportunity names (not just counts) so users can see exactly which deals are affected by each risk factor
+3. Use VISUAL elements for risk factor display:
+   - Timeline Risk: Progress bar (red = urgent, green = safe)
+   - Champion Strength: Icon indicators (🏆 = strong, ⚠️ = weak, ❌ = missing)
+   - Activity Sentiment: Trend arrows (↗️ improving, ➡️ stable, ↘️ declining)
+   - Competition: Threat level badges (🔴 High, 🟡 Medium, 🟢 Low)
+   - Support Issues: Status icons (✅ clean, ⚠️ minor, 🚨 critical)
+4. Highlight the most critical 2-3 deals requiring immediate focus
+5. Include dollar amounts at risk to emphasize business impact
+6. **CRITICAL**: In Risk Factor Analysis table, always show specific opportunity names (not just counts)
+7. **MANDATORY**: Create visual risk cards for ALL opportunities, not just high-risk ones
+8. AVOID lengthy text paragraphs - use compact visual indicators instead
 
 -- VISUALIZATION & HTML STYLE REQUIREMENTS:
 
 Use inline HTML and CSS only (no class names or external styles)
-Create a comprehensive dashboard with multiple sections:
-- Executive summary card with key metrics
-- Risk-scored tables with color coding
-- Trend indicators and warning flags
-- Professional styling with consistent color scheme
+Create a comprehensive VISUAL dashboard with multiple sections:
+- Executive summary with 3-card responsive layout
+- Risk-scored tables with white backgrounds (no colored table backgrounds)
+- Visual risk indicators: progress bars, gauges, trend arrows, icons
+- Opportunity cards with visual risk breakdowns (not text paragraphs)
+- Professional styling with EXACT color scheme from Champion Network Analysis template
+- AVOID: Lengthy text explanations, report-style content, colored table row backgrounds
+- FOCUS: Visual elements, charts, icons, progress indicators, compact information display
 
-Color Coding for Risk Levels:
-- Critical Risk: Background #ffebee, text #c62828
+Color Coding for Risk Levels (Matching Champion Network Analysis):
+- Critical Risk: Background #ffebee, text #d32f2f
 - High Risk: Background #fff3e0, text #ef6c00  
 - Medium Risk: Background #fffde7, text #f9a825
 - Low Risk: Background #e8f5e8, text #2e7d32
@@ -139,14 +158,14 @@ Wrap all content in container with:
 Structure:
 - Dashboard title: "Deal Risk Intelligence Dashboard - Account: {{{Name}}}"
 - Account context header: {{{Name}}} ({{{Industry}}}, {{{AnnualRevenue}}}, {{{Client_Segment__c}}})
-- Executive Risk Summary (metrics cards)
-- High-Risk Opportunities table (overview level)
-- Risk Factor Analysis table  
-- Activity Sentiment Tracker
-- Risk Score Reasoning (detailed explanations for each opportunity score)
-- Detailed Opportunity Analysis (individual drill-down sections for each opportunity)
-- Case Impact Assessment
-- Action Priority Summary
+- Executive Risk Summary (EXACTLY 3 cards in responsive flexbox layout)
+- Risk-Scored Opportunities table (ALL opportunities with calculated risk scores)
+- Risk Factor Analysis table (compact, visual indicators)
+- Opportunity Risk Cards (MANDATORY visual cards for ALL opportunities)
+- Risk Score Visual Breakdown (MANDATORY visual risk factor breakdown for ALL opportunities) 
+- Action Priority Summary (visual priority matrix)
+
+CRITICAL: Always generate exactly 3 Executive Summary cards. Focus on VISUAL elements over text. Make it dashboard-like, not report-like.
 
 -- OUTPUT REQUIREMENT:
 
@@ -158,14 +177,16 @@ Return complete inline HTML dashboard containing:
 - No unnecessary explanations or placeholders
 
 Critical Instructions:
-1. Calculate actual risk scores - do not use placeholder values
-2. Generate specific recommendations based on data patterns
-3. Identify the 2-3 most critical deals requiring immediate attention
-4. Include total dollar amounts at risk for executive visibility
-5. Show clear next actions with timeframes
-6. Color-code all risk indicators consistently
-7. Ensure all opportunity records are analyzed and displayed
-8. Generate insights that go beyond just displaying data
+1. Calculate actual risk scores for ALL opportunities - do not use placeholder values
+2. MANDATORY: Create visual risk cards for ALL opportunities in the data
+3. MANDATORY: Include visual risk factor breakdown for ALL opportunities 
+4. Use VISUAL elements (progress bars, gauges, icons) instead of lengthy text
+5. Identify the 2-3 most critical deals requiring immediate attention
+6. Include total dollar amounts at risk for executive visibility
+7. Show clear next actions with timeframes for each opportunity
+8. Color-code all risk indicators consistently using Champion Network Analysis color scheme
+9. Make it dashboard-like with visual elements, NOT report-like with paragraphs
+10. Focus on actionable insights through visual representation, not extensive text analysis
 
 Use risk intelligence to drive action, not just provide information.
 
