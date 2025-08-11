@@ -395,43 +395,39 @@ Description
 Transforms contract and customer success data into strategic renewal and expansion intelligence. Analyzes health indicators, support case patterns, and engagement quality to provide actionable insights for customer success teams.
 
 How it Works?
-## **Turn customer success data into renewal and expansion intelligence.**
+**Transforms customer success data into strategic renewal and expansion intelligence through evidence-based health scoring and timeline analysis.**
 
-### This dashboard transforms contract and support data into strategic customer success insights:
+This comprehensive dashboard analyzes contracts, support cases, and engagement patterns to provide actionable insights for customer success teams.
 
-**1. Health-Based Renewal Scoring**
-Analyzes actual customer success indicators to assess renewal probability:
-- Support case volume, severity, and resolution quality analysis
-- Customer engagement frequency and stakeholder coverage patterns
-- Product adoption metrics and value realization tracking
-- Contract compliance and payment history assessment
-- Comprehensive health scoring for proactive risk management
+**Evidence-Based Health Scoring System**
+The platform calculates renewal health scores using a sophisticated weighted methodology:
 
-**2. Expansion Opportunity Engine**
-Data-driven approach to identifying growth opportunities:
-- Success pattern analysis to identify expansion-ready accounts
-- Product/service expansion mapping based on current usage
-- Revenue growth potential quantification and timing optimization
-- Stakeholder engagement assessment for expansion conversations
-- Success-based expansion strategies leveraging positive customer experiences
+• **Support Case Analysis (30%)** - Evaluates case volume, resolution times, and priority levels to assess customer satisfaction
+• **Engagement Quality Assessment (25%)** - Measures communication frequency, stakeholder coverage, and relationship depth
+• **Product Value Realization (20%)** - Tracks adoption metrics and documented ROI from customer interactions
+• **Customer Advocacy Strength (10%)** - Analyzes referral activity and testimonial participation
+• **Contract Compliance Health (10%)** - Reviews payment history and terms adherence
+• **Expansion Momentum (5%)** - Identifies active growth opportunities and strategic discussions
 
-**3. Risk Mitigation Intelligence**
-Proactive approach to customer retention:
-- Identification of at-risk contracts requiring immediate intervention
-- Specific action plans for health score improvement
-- Support case resolution acceleration for customer experience enhancement
-- Stakeholder engagement plans for under-engaged decision makers
-- Timeline-based success metrics with measurable outcomes
+**Customer Success Timeline Intelligence**
+Creates a chronological view of customer interactions with direct evidence:
 
-### Key Features
-- **Health-Based Scoring:** Renewal probability based on actual customer success indicators
-- **Support Case Intelligence:** Detailed case impact analysis and resolution tracking
-- **Expansion Readiness:** Clear identification of growth opportunities with revenue potential
-- **Risk Mitigation Plans:** Specific action plans for at-risk accounts
-- **Success Metrics:** Measurable goals for customer health improvement
-- **Engagement Optimization:** Strategies for deepening customer relationships
+• **Quote-Driven Analysis** - Extracts actual customer statements from activity descriptions
+• **Contact Attribution** - Links interactions to specific stakeholders with hyperlinked sources  
+• **Health Impact Assessment** - Connects each interaction to renewal probability changes
+• **Relationship Progression** - Shows engagement evolution across multiple touchpoints
+• **Evidence Traceability** - Provides direct links to source records for verification
 
-This tool helps customer success teams retain customers and drive expansion by analyzing health indicators, identifying risks early, and providing clear strategies for account growth and retention success.
+**Risk Mitigation and Expansion Planning**
+Generates specific, evidence-backed recommendations:
+
+• **Contract-Specific Action Plans** - Tailored interventions based on health score components
+• **Stakeholder Engagement Strategy** - Targeted outreach plans for decision makers
+• **Support Process Optimization** - Case resolution improvements based on patterns
+• **Expansion Opportunity Identification** - Growth discussions supported by positive interactions
+• **Success Metrics Tracking** - Measurable goals with baseline evidence from current data
+
+This tool enables customer success teams to make data-driven retention and expansion decisions by providing transparent health scoring, detailed interaction histories, and specific action plans supported by actual customer evidence.
 
 Input Data:
 {
