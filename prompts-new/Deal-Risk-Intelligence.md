@@ -20,8 +20,14 @@ Executive Risk Summary Cards (3-Card Dashboard Layout)
 - REQUIRED HTML STRUCTURE: Each card must have `background: #ffffff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(60,72,88,0.08); text-align: center;`
 - CONSISTENT FORMAT: Card title in small caps, large number/score, descriptive text below
 
-Risk-Scored Opportunities Table
+**Risk-Scored Opportunities Table**
 - Source: "Opportunities" array (show ALL opportunities with calculated risk scores)
+- **SORTING REQUIREMENT**: Sort table by Risk Score in DESCENDING order (highest risk first)
+- **COLOR CODING**: Apply visible row background colors based on risk score:
+  - 85-100 (Critical): Background #ffebee, hover #ffcdd2
+  - 70-84 (High): Background #fff3e0, hover #ffe0b2  
+  - 50-69 (Medium): Background #fffde7, hover #fff9c4
+  - 0-49 (Low): Background #e8f5e8, hover #c8e6c8
 - Columns:
 - Opportunity Name → Show {{{Opportunities.Name}}} as hyperlink to '/'+{{{Opportunities.Id}}}
 - Amount → Format {{{Opportunities.Amount}}} as currency
@@ -32,7 +38,7 @@ Risk-Scored Opportunities Table
 - Champion Status → Analyze opportunity notes and contact engagement
 - Next Action → AI-generated recommendation based on risk factors
 
-Risk Factor Analysis Table  
+**Risk Factor Analysis Table**
 - Source: Analyze patterns across Opportunities + Activities + Cases data
 - Show specific risk factors with clear opportunity linkage
 - Columns:
@@ -42,7 +48,7 @@ Risk Factor Analysis Table
 - Early Warning Signs → AI-generated indicators from activity sentiment
 - Mitigation Strategy → AI-generated recommendations specific to the affected opportunities
 
-Activity Sentiment Tracker
+**Activity Sentiment Tracker**
 - Source: "Activities" array linked to high-risk opportunities
 - Recent activity sentiment analysis showing engagement quality
 - Columns:
@@ -65,16 +71,30 @@ Risk Score Visual Breakdown
 - COMPACT FORMAT: Each opportunity gets a visual risk factor grid, not lengthy text explanations
 - CRITICAL: Must show visual breakdown for ALL opportunities in the Opportunities array
 
-Opportunity Risk Cards
-- Source: Individual visual cards for each opportunity in the data  
-- VISUAL FORMAT: Compact card layout showing key risk metrics at a glance
-- Include for each opportunity: Risk gauge, Key stakeholder, Primary threat, Next action
-- Show visual timeline indicators and competitive positioning
-- Format: Grid of opportunity cards with consistent visual design
-- REMOVE: Long text paragraphs and detailed prose analysis
-- CRITICAL: Must create visual risk cards for ALL opportunities in the Opportunities array
+**Opportunity Risk Cards**
+- Source: Individual visual risk cards for each opportunity in the data  
+- **MANDATORY DISPLAY**: Create visual risk cards for ALL opportunities in the Opportunities array
+- **CRITICAL SORTING**: Cards MUST be sorted by Risk Score in DESCENDING order (same order as table)
+- **VISUAL FORMAT**: Responsive grid layout using auto-fit for consistent card alignment
+- **CARD STRUCTURE**: Each card must contain:
+  - Opportunity name as clickable header linking to '/'+{{{Opportunities.Id}}}
+  - Large risk score badge with visible color coding (matching table colors)
+  - Amount formatted as currency in prominent display
+  - Close date with days remaining countdown
+  - Primary risk factor with descriptive text (no excessive icons)
+  - Champion status with simple text indicator
+  - Next action as styled button with appropriate color based on risk level
+- **SORTING VERIFICATION**: Highest risk score card should appear first (top-left), lowest risk score card should appear last
+- **STYLING REQUIREMENTS**:
+  - Grid layout: `display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;`
+  - Card dimensions: min-height 280px, consistent width, proper spacing
+  - Risk score badge: Large, centered, subtle color-coded background matching table colors
+  - Card hover effects: slight scale transform and enhanced shadow
+  - Typography: Consistent font sizing and hierarchy
+- **CRITICAL**: Must show ALL opportunities, not just high-risk ones
+- **LAYOUT FIX**: Use auto-fit grid instead of fixed 3 columns for better responsiveness
 
-Case Impact Assessment
+**Case Impact Assessment**
 - Source: "Cases" array to identify support issues affecting deals
 - Show how open support cases might impact deal progression
 - Columns:
@@ -128,11 +148,11 @@ Create a comprehensive VISUAL dashboard with multiple sections:
 - AVOID: Lengthy text explanations, report-style content, colored table row backgrounds
 - FOCUS: Visual elements, charts, icons, progress indicators, compact information display
 
-Color Coding for Risk Levels (Matching Champion Network Analysis):
-- Critical Risk: Background #ffebee, text #d32f2f
-- High Risk: Background #fff3e0, text #ef6c00  
-- Medium Risk: Background #fffde7, text #f9a825
-- Low Risk: Background #e8f5e8, text #2e7d32
+Color Coding for Risk Levels (Enhanced Visibility):
+- Critical Risk (85-100): Background #ffebee, text #c62828, hover #ffcdd2
+- High Risk (70-84): Background #fff3e0, text #ef6c00, hover #ffe0b2  
+- Medium Risk (50-69): Background #fffde7, text #f9a825, hover #fff9c4
+- Low Risk (0-49): Background #e8f5e8, text #2e7d32, hover #c8e6c8
 
 Card Styling:
 - Background: white #ffffff
@@ -178,15 +198,17 @@ Return complete inline HTML dashboard containing:
 
 Critical Instructions:
 1. Calculate actual risk scores for ALL opportunities - do not use placeholder values
-2. MANDATORY: Create visual risk cards for ALL opportunities in the data
-3. MANDATORY: Include visual risk factor breakdown for ALL opportunities 
-4. Use VISUAL elements (progress bars, gauges, icons) instead of lengthy text
-5. Identify the 2-3 most critical deals requiring immediate attention
-6. Include total dollar amounts at risk for executive visibility
-7. Show clear next actions with timeframes for each opportunity
-8. Color-code all risk indicators consistently using Champion Network Analysis color scheme
-9. Make it dashboard-like with visual elements, NOT report-like with paragraphs
-10. Focus on actionable insights through visual representation, not extensive text analysis
+2. **MANDATORY SORTING**: Both table AND cards must be sorted by Risk Score in DESCENDING order (highest risk first)
+3. MANDATORY: Create visual risk cards for ALL opportunities in the data
+4. MANDATORY: Include visual risk factor breakdown for ALL opportunities 
+5. Use VISUAL elements (progress bars, gauges, icons) instead of lengthy text
+6. Identify the 2-3 most critical deals requiring immediate attention
+7. Include total dollar amounts at risk for executive visibility
+8. Show clear next actions with timeframes for each opportunity
+9. Color-code all risk indicators with sufficient contrast for visibility
+10. Make it dashboard-like with visual elements, NOT report-like with paragraphs
+11. **CRITICAL**: Ensure cards appear in identical order as table rows (highest risk score first)
+12. Focus on actionable insights through visual representation, not extensive text analysis
 
 Use risk intelligence to drive action, not just provide information.
 
@@ -225,11 +247,13 @@ Provides specific, actionable recommendations:
 
 ### Key Features
 - **Intelligent Risk Scoring:** AI-calculated risk assessment based on multiple data points
+- **Risk-Based Prioritization:** Opportunities automatically sorted by risk score (highest risk first)
+- **Color-Coded Risk Levels:** Visual risk indicators with consistent color scheme (Critical=Red, High=Orange, Medium=Yellow, Low=Green)
 - **Executive Summary:** Portfolio-level health metrics and trends
 - **Action-Oriented Insights:** Specific recommendations, not just data display
 - **Multi-Source Analysis:** Combines opportunities, activities, cases, and notes
-- **Visual Risk Indicators:** Color-coded alerts and trend analysis
-- **Immediate Focus Areas:** Highlights the 2-3 most critical deals
+- **Visual Risk Cards:** Individual opportunity cards showing comprehensive risk breakdown for ALL deals
+- **Immediate Focus Areas:** Highlights the 2-3 most critical deals requiring urgent intervention
 
 This tool helps sales teams proactively manage their pipeline by identifying risks early and providing clear action plans to prevent deal losses.
 
